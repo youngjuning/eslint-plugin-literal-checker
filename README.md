@@ -18,7 +18,7 @@ $ npm install eslint-plugin-literal-check --save-dev
   rules: {
     'literal-check/literal-check': [
       2,
-      ['tuya.ai', 'tuya.ia', 'tuya.m', 'tuya.industry', 'tuya.smarthome'],
+      ['tuya.'],
       ['tuya.m.device.media.latest', 'tuya.m.device.media.detail'],
     ],
   }
