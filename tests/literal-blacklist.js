@@ -1,7 +1,7 @@
 'use strict';
 
 const RuleTester = require('eslint').RuleTester;
-const tester = new RuleTester();
+const tester = new RuleTester({ parserOptions: { ecmaVersion: 2015 } });
 
 tester.run('literal-check', require('../rules/literal-check'), {
   valid: [
@@ -12,6 +12,9 @@ tester.run('literal-check', require('../rules/literal-check'), {
       options: [['http:']]
     },
     { code: 'http();',
+      options: [['http:']
+    ]},
+    { code: 'var template = `https://${domain}`',
       options: [['http:']
     ]}
   ],
@@ -33,6 +36,10 @@ tester.run('literal-check', require('../rules/literal-check'), {
       errors: ['You should not use "http:".']
     },
     { code: '(function() { return "http://example.com" })();',
+      options: [['http:']],
+      errors: ['You should not use "http:".']
+    },
+    { code: 'var template = `http://${domain}`',
       options: [['http:']],
       errors: ['You should not use "http:".']
     }
