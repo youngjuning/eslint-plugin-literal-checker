@@ -1,16 +1,17 @@
 {
-  "name": "@luozhu2021/eslint-plugin-literal-check",
+  "name": "eslint-plugin-literal-checker",
   "description": "An ESLint micro plugin",
   "version": "1.0.0",
   "author": "youngjuning",
   "bugs": {
-    "url": "https://github.com/kyaido/eslint-plugin-literal-check/issues"
+    "url": "https://github.com/kyaido/eslint-plugin-literal-checker/issues"
   },
   "devDependencies": {
     "eslint": "^6.1.0",
-    "mocha": "^7.1.2"
+    "mocha": "^7.1.2",
+    "standard-version": "^9.3.2"
   },
-  "homepage": "https://github.com/youngjuning/eslint-plugin-literal-check",
+  "homepage": "https://github.com/youngjuning/eslint-plugin-literal-checker",
   "keywords": [
     "eslint",
     "eslint-plugin",
@@ -20,9 +21,10 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/youngjuning/eslint-plugin-literal-check.git"
+    "url": "https://github.com/youngjuning/eslint-plugin-literal-checker.git"
   },
   "scripts": {
+    "release-it": "standard-version",
     "test": "mocha tests/**/*.js"
   }
 }

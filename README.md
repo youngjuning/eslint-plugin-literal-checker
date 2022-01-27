@@ -1,22 +1,21 @@
-# eslint-plugin-literal-check
+# eslint-plugin-literal-checker
 
 An ESLint micro plugin.
 
 ## Installation
 
 ```
-$ npm install eslint-plugin-literal-check --save-dev
+$ npm install eslint-plugin-literal-checker --save-dev
 ```
-
 
 ## Usage
 
 ```
 // .eslintrc.js
 {
-  plugins: ['literal-check'],
+  plugins: ['literal-checker'],
   rules: {
-    'literal-check/literal-check': [
+    'literal-checker/literal-check': [
       2,
       ['tuya.'],
       ['tuya.m.device.media.latest', 'tuya.m.device.media.detail'],
@@ -30,4 +29,4 @@ $ npm install eslint-plugin-literal-check --save-dev
 
 ### `literal-check`
 
-Define blacklist strings and whitelist strings for literal.
+Define denylist strings and allowlist strings for literal.
