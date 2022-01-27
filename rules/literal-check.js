@@ -8,9 +8,9 @@
  * @param {string[]} denyList List of prohibited literals
  */
 function checkValue(value, context, node, allowList, denyList) {
-  denyList.forEach(blackItem => {
-    if(value.indexOf(blackItem) !== -1 && allowList.indexOf(value) === -1) {
-      let message = `You should not use "${blackItem}".`;
+  denyList.forEach(denyItem => {
+    if(value.indexOf(denyItem) !== -1 && allowList.indexOf(value) === -1) {
+      let message = `You should not use "${denyItem}".`;
       context.report({node: node, message: message});
     }
   });
